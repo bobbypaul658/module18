@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>IBM HR Analytics Employee Attrition &amp; Performance | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Predict attrition of your valuable employees" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="business,software,employment" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="IYsXjddojZGivd4j4N1v4g==" type="text/javascript">
+    window["pageRequestStartTime"] = 1651099806497;
+    window["pageRequestEndTime"] = 1651099806644;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="IYsXjddojZGivd4j4N1v4g==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/pavansubhasht/ibm-hr-analytics-attrition-dataset" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=1f6d99669e949b7dfa2b" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=c938137e20b65e283de9" />
+  
+    
+ 
+      <script nonce="IYsXjddojZGivd4j4N1v4g==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="IYsXjddojZGivd4j4N1v4g==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="IYsXjddojZGivd4j4N1v4g==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+    <meta property="og:url" content="/pavansubhasht/ibm-hr-analytics-attrition-dataset" />
+    <meta property="og:title" content="IBM HR Analytics Employee Attrition &amp; Performance" />
+    <meta property="og:description" content="Predict attrition of your valuable employees" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/1067/1925/5fc43e97e25975d1a14cba2e706255cb/dataset-card.jpg" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="IYsXjddojZGivd4j4N1v4g==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"IBM HR Analytics Employee Attrition &amp; Performance","description":"Uncover the factors that lead to employee attrition and explore important questions such as ‘show me a breakdown of distance from home by job role and attrition’ or ‘compare average monthly income by education and attrition’. This is a fictional data set created by IBM data scientists.\n\nEducation\n\t1 'Below College'\n\t2 'College'\n\t3 'Bachelor'\n\t4 'Master'\n\t5 'Doctor'\n\t\nEnvironmentSatisfaction\n\t1 'Low'\n\t2 'Medium'\n\t3 'High'\n\t4 'Very High'\n\t\nJobInvolvement\t\n        1 'Low'\n\t2 'Medium'\n\t3 'High'\n\t4 'Very High'\n\t\nJobSatisfaction\t\n       1 'Low'\n\t2 'Medium'\n\t3 'High'\n\t4 'Very High'\n\t\nPerformanceRating\t\n        1 'Low'\n\t2 'Good'\n\t3 'Excellent'\n\t4 'Outstanding'\n\t\nRelationshipSatisfaction\t\n        1 'Low'\n\t2 'Medium'\n\t3 'High'\n\t4 'Very High'\n\t\nWorkLifeBalance\t\n        1 'Bad'\n\t2 'Good'\n\t3 'Better'\n\t4 'Best'","url":"https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset","version":1,"keywords":["subject, people and society, business","subject, science and technology, computer science, software","subject, people and society, jobs and career, employment"],"license":{"@type":"CreativeWork","name":"Database: Open Database, Contents: Database Contents","url":"http://opendatacommons.org/licenses/dbcl/1.0/"},"identifier":["1067"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"pavansubhash","url":"https://www.kaggle.com/pavansubhasht","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/862007-gp.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset/download","contentSize":"51314 bytes"}],"commentCount":30,"dateModified":"2017-03-31T06:55:16.973Z","discussionUrl":"https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset/discussion","alternateName":"Predict attrition of your valuable employees","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/1067/1925/5fc43e97e25975d1a14cba2e706255cb/dataset-card.jpg","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":30},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":99334},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":919656},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":1893}]}</script>
+
+
+  
+    
+
+  
+    
+    
+<script nonce="IYsXjddojZGivd4j4N1v4g==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8FbwD2QDBxpLtyrOjK44q8bIuhaU4KfwV0hNrkp0PpDEfScxvyXLJABMq9FXB10a3jmVLHUi-av3ScwjpSEX1WJQRhXkBlouZWXz6z-WjjyCnw',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTExMDA3MDYsIlVzZXJJZCI6MH0.JQZhSJ57f9S5vcb4ylYa26SnXOyf1tohoJegEkMIAJY',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        enableRapidash: true, 
+        
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    var decodeUserDisplayName = function () {
+        var escapedUserDisplayName = Kaggle.Current.userDisplayNameEscaped || "";
+        try {
+            var textVersion = new DOMParser().parseFromString(escapedUserDisplayName, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserDisplayName;
+    }
+    Kaggle.Current.userDisplayName = decodeUserDisplayName();
+</script>
+
+    
+
+<script nonce="IYsXjddojZGivd4j4N1v4g==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="IYsXjddojZGivd4j4N1v4g==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="IYsXjddojZGivd4j4N1v4g==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="IYsXjddojZGivd4j4N1v4g==" src="/static/assets/runtime.js?v=9051dcf9bca9213fc26c" data-turbolinks-track="reload"></script>
+  <script nonce="IYsXjddojZGivd4j4N1v4g==" src="/static/assets/vendor.js?v=a2004e5f19533473e100" data-turbolinks-track="reload"></script>
+  <script nonce="IYsXjddojZGivd4j4N1v4g==" src="/static/assets/app.js?v=ef6901ac8f4a066a076c" data-turbolinks-track="reload"></script>
+    <script nonce="IYsXjddojZGivd4j4N1v4g==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="IYsXjddojZGivd4j4N1v4g==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="IYsXjddojZGivd4j4N1v4g==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":1067,"slug":"ibm-hr-analytics-attrition-dataset","title":"IBM HR Analytics Employee Attrition \u0026 Performance","description":"Uncover the factors that lead to employee attrition and explore important questions such as \u2018show me a breakdown of distance from home by job role and attrition\u2019 or \u2018compare average monthly income by education and attrition\u2019. This is a fictional data set created by IBM data scientists.\n\nEducation\n\t1 \u0027Below College\u0027\n\t2 \u0027College\u0027\n\t3 \u0027Bachelor\u0027\n\t4 \u0027Master\u0027\n\t5 \u0027Doctor\u0027\n\t\nEnvironmentSatisfaction\n\t1 \u0027Low\u0027\n\t2 \u0027Medium\u0027\n\t3 \u0027High\u0027\n\t4 \u0027Very High\u0027\n\t\nJobInvolvement\t\n        1 \u0027Low\u0027\n\t2 \u0027Medium\u0027\n\t3 \u0027High\u0027\n\t4 \u0027Very High\u0027\n\t\nJobSatisfaction\t\n       1 \u0027Low\u0027\n\t2 \u0027Medium\u0027\n\t3 \u0027High\u0027\n\t4 \u0027Very High\u0027\n\t\nPerformanceRating\t\n        1 \u0027Low\u0027\n\t2 \u0027Good\u0027\n\t3 \u0027Excellent\u0027\n\t4 \u0027Outstanding\u0027\n\t\nRelationshipSatisfaction\t\n        1 \u0027Low\u0027\n\t2 \u0027Medium\u0027\n\t3 \u0027High\u0027\n\t4 \u0027Very High\u0027\n\t\nWorkLifeBalance\t\n        1 \u0027Bad\u0027\n\t2 \u0027Good\u0027\n\t3 \u0027Better\u0027\n\t4 \u0027Best\u0027","viewCount":919656,"downloadCount":99334,"scriptCount":553,"topicCount":30,"owner":{"id":862007,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/862007-gp.jpg","name":"pavansubhash","profileUrl":"/pavansubhasht","slug":"pavansubhasht"},"license":{"id":5,"name":"Database: Open Database, Contents: Database Contents","url":"http://opendatacommons.org/licenses/dbcl/1.0/"},"overview":"Predict attrition of your valuable employees","collaboratorList":{"owner":{"userId":862007,"profileUrl":"/pavansubhasht","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/862007-gp.jpg","name":"pavansubhash","slug":"pavansubhasht","type":"OWNER"}},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1067/1925/5fc43e97e25975d1a14cba2e706255cb/dataset-cover.jpg","data":{"totalSize":51314,"isFileset":true,"canSeeDownload":true,"firestorePath":"SclMpCPJ71KvOVvotRub/versions/oQOP4jwdgjF4RlL2riqk","downloadUrl":"/datasets/pavansubhasht/pavansubhasht/download?datasetVersionNumber=1","versionId":1925,"id":1067},"voteCount":1893,"medalUrl":"/static/images/medals/datasets/goldl@2x.png","downloadUrl":"/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset/download","lastUpdateTime":"2017-03-31T06:55:16.973Z","datasetVersionNumber":1,"creatorDisplayName":"pavansubhash","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1067/1925/5fc43e97e25975d1a14cba2e706255cb/dataset-card.jpg","categories":{"tags":[{"id":11102,"name":"business","fullPath":"subject \u003E people and society \u003E business","listingUrl":"/datasets?group=public\u0026tagids=11102","description":"Businesses are organizational entities that drive economic activity. Explore the inner workings of things like HR practices, product sales, and customer happiness in these competitions, kernels, and datasets.","datasetCount":29923,"competitionCount":3,"notebookCount":25661,"tagUrl":"/tags/business","displayName":"Business","fontAwesomeIcon":"briefcase"},{"id":12127,"name":"software","fullPath":"subject \u003E science and technology \u003E computer science \u003E software","listingUrl":"/datasets?group=public\u0026tagids=12127","description":"","datasetCount":5003,"notebookCount":11575,"tagUrl":"/tags/software","displayName":"Software"},{"id":8302,"name":"employment","fullPath":"subject \u003E people and society \u003E jobs and career \u003E employment","listingUrl":"/datasets?group=public\u0026tagids=8302","description":"Where does it pay to attend college? What impacts employee satisfaction and what makes them quit their jobs? Explore these questions and others in kernels and datasets with this tag.","datasetCount":231,"competitionCount":1,"notebookCount":106,"tagUrl":"/tags/employment","displayName":"Employment"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset","forumId":3045,"datasetVersionId":1925,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","lastVersionNumber":1,"diffType":"VERSIONED"},"@wf": "Datasets.DatasetMaterialDtoWireFormat3"});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script>
+<script nonce="IYsXjddojZGivd4j4N1v4g==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: [],
+    });
+</script>
+<script type="text/javascript" nonce="IYsXjddojZGivd4j4N1v4g==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
